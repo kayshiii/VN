@@ -16,7 +16,7 @@ default shakes = 0
 # snowglobe made with dandruff
 label snowglobe:
 
-    play music "audio/bgm_winter.mp3" fadein 1.0 volume 0.4
+    play music "audio/bgm_winter.mp3" fadein 0.5 volume 0.4
     you "This is… kinda disgusting."
 
     scene bg snowglobe
@@ -243,7 +243,7 @@ label build_snowman_maddie:
             jump ending_scene
 
 label build_snowman_handsum_madong:
-    scene bg madong
+    show bg snow2
     show madong
     madong "Hey there, buddy."
     madong "Stay  in school."

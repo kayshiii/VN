@@ -13,7 +13,7 @@ define narrator = Character(None, what_color="#979797", what_italic=True)
 # The game starts here.
 
 label start:
-    play music "audio/bgm_intro_outro.mp3" fadein 1.0 volume 0.5
+    play music "audio/bgm_intro_outro.mp3" fadein 2.0 volume 0.5
     play sound "audio/sfx_knocking.mp3"
 
     narrator "*knock knock knock*"
