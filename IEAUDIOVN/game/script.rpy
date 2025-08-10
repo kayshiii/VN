@@ -30,3 +30,17 @@ label sprites:
     "Random Girl" "Tsundere..."
     hide extra
     "Zeil" "..."
+    label character:
+    show zeil bored
+    "Zeil" "Wow... this is too plain."
+    show zeil smile2 with dissolve
+    "Zeil" "I want my color to be bright pink!"
+    Zeil "Wonderful!"    
+
+label background:
+    Zeil "Come on! Let's go the gym."
+    scene bg gym
+    with fade
+
+    show zeil smile2 at left
+    Zeil "You got here faster than I did!" 
