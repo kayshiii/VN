@@ -3,31 +3,39 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define zeil = Character('Zeil', color = "#E03B8B")
+define you = Character('You', color = "#ffffff")
 define mom = Character('Mom', color = "#6999ff")
+define dog = Character('Dog', color = "#b700ff")
+define madong = Character('Hansum Madong', color = "#22ff04")
+define maddie = Character('Maddie', color = "#8c00ff")
+define narrator = Character(None, what_color="#979797", what_italic=True)
 
 # The game starts here.
 
 label start:
-    "{i}{color=#979797} knocking {/color}{/i}"
+    play music "audio/bgm_intro_outro.mp3" fadein 1.0 volume 0.1
+    play sound "audio/sfx_knocking.mp3"
 
-    #play knocking sound fx
+    narrator "*knock knock knock*"
+
+    scene bg bedroom
+    with fade
 
     mom "Nak, I left your dinner outside the door."
     "..."
     mom "Eat it while it’s warm."
     "..."
-    "Thanks mom"
-    show zeil delighted
-    "Oh, it smells like pares."
-    show zeil sad
-    "I don’t think she’s made that since Maddie stopped coming over…"
-    "Man."
-    "{i}{color=#979797}You look over to the box of stuff Maddie left behind. Two things catch your attention{/color}{/i}"
+
+    you "Thanks mom"
+    you "Oh, it smells like pares."
+    you "I don’t think she’s made that since Maddie stopped coming over…"
+    you "Man."
+
+    narrator "You look over to the box of stuff Maddie left behind. Two things catch your attention."
 
 menu:
     "Old Game Cartridge":
-        jump snowglobe
+        jump cartridge_start
     "Snowglobe made with dandruff":
         jump snowglobe
 

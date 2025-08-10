@@ -15,11 +15,24 @@ default shakes = 0
 
 # snowglobe made with dandruff
 label snowglobe:
+
+    play music "audio/bgm_winter.mp3" fadein 1.0 volume 0.1
     you "This is… kinda disgusting."
+
+    scene bg snowglobe
+    with fade
+
     narrator "The edges of your lips crease up, and for the first time in a while, you can’t help but crack into a smile."
     you "When we were kids, she kept talking about how much she wanted to play in the snow."
+
+    show bg philippines
+    with fade
+
     you "We waited for it all year but, turns out we don’t have that kind of weather in the Philippines."
     you "So, I guess my 5-year-old brain thought making a gross snowglobe with my dandruff was the next best thing…"
+
+    scene bg snowglobe
+    with fade
 
     $ shakes = 0;
     while shakes < 4:
@@ -41,7 +54,7 @@ label snowglobe_broken:
     narrator "You slip."
 
 label next_day:
-    scene bg classroom
+    scene bg bedroom
     with fade
 
     you "I know I should’ve just like, called or something."
@@ -56,7 +69,7 @@ label next_day:
     you "I wish we weren’t strangers when you died, Maddie."
     you "I hope it was snowing when you left."
 
-    show bg gym
+    show bg bedroom
     with fade
 
     narrator "After lying on the floor for a while, you finally blink your stinging eyes open."
@@ -77,6 +90,9 @@ label move_forward_choice:
             jump move_forward_choice
 
 label move_forward:
+
+    show black
+
     you "Guess I’ll try to explore."
     narrator "The room is pitch black. You lift your hands up to your face, but you can’t see them at all."
     you "I better just like, crawl so I don’t bump into anything."
@@ -84,6 +100,10 @@ label move_forward:
     narrator "However, you never find the wall."
     narrator "The path below you grows colder, and colder until…"
     you "Is this... snow?"
+
+    scene bg snow
+    with fade
+
     narrator "The room lights up."
     narrator "All that surrounds you are piles of snow."
 
