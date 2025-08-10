@@ -3,31 +3,30 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define zeil = Character('Zeil', color = "#E03B8B")
 
 
 # The game starts here.
 
 label start:
+    "*knocking*"
+    "Nak, I left your dinner outside the door."
+    "..."
+    "Eat it while it’s warm."
+    "..."
+    "Thanks mom"
+    "Oh, it smells like pares."
+    "I don’t think she’s made that since Maddie stopped coming over…"
+    "Man."
+    "You look over to the box of stuff Maddie left behind. Two things catch your attention"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+label sprites:
+    "Zeil"  "But wait, where are you?"
+    show zeil delighted
+    "Zeil"  "Oh!"
+    show zeil angry
+    "Zeil" "It's not like I was looking for you or anything."
+    show extra normal at right
+    "Random Girl" "Tsundere..."
+    hide extra
+    "Zeil" "..."
