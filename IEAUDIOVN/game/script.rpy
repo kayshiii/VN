@@ -21,8 +21,11 @@ label start:
     scene bg bedroom
     with fade
 
+    voice "audio/mom_1.mp3"
     mom "Nak, I left your dinner outside the door."
     "..."
+
+    voice "audio/mom_2.mp3"
     mom "Eat it while it’s warm."
     "..."
 
