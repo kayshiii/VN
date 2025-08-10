@@ -41,17 +41,32 @@ label snowglobe:
                 $ shakes += 1
                 if shakes == 3 and not shake_dialogue:
                     $ shake_dialogue = True
+                    play sound "audio/sfx_snowglobe.mp3" volume 0.2
                     narrator "You shake the snowglobe."
                     narrator "Are you done?"
                 else:
+                    play sound "audio/sfx_snowglobe.mp3" volume 0.2
                     narrator "You shake the snowglobe."
     jump snowglobe_broken
 
 label snowglobe_broken:
+    play sound "audio/sfx_leak.mp3" volume 0.2
     narrator "The snowglobe leaks the viscous liquid out of itself, rapidly pouring it all over your floor."
     you "Oh- oh my god"
     narrator "You scramble to find something to wipe it with, but in your hurry…"
+    stop sound fadeout 0.5
+
+    show black
+    play sound "audio/sfx_thud.mp3" volume 0.5
     narrator "You slip."
+
+
+    scene black with fade
+    pause 0.5
+    show text "{size=30}{color=#ffffff} The Next day...{/color}{/size}" at truecenter with dissolve
+    pause 2.0
+    hide text with dissolve
+    pause 0.5
 
 label next_day:
     scene bg bedroom
@@ -76,6 +91,7 @@ label next_day:
     narrator "Wiping away tears, you blink once more."
     narrator "Then again."
     narrator "and again."
+    show black
     narrator "Then you realize, your room is completely dark."
 
 label move_forward_choice:
@@ -98,6 +114,9 @@ label move_forward:
     you "I better just like, crawl so I don’t bump into anything."
     narrator "You go on all fours and start crawling your way forward, making your way to where you think the wall with the light switch is."
     narrator "However, you never find the wall."
+    play sound "audio/sfx_snowing.mp3" volume 0.2
+    play sound "audio/sfx_snow_walking.mp3" volume 0.2
+
     narrator "The path below you grows colder, and colder until…"
     you "Is this... snow?"
 
@@ -106,6 +125,7 @@ label move_forward:
 
     narrator "The room lights up."
     narrator "All that surrounds you are piles of snow."
+    stop sound fadeout 0.5
 
 label build_snowman_choice:
     menu:
@@ -214,7 +234,7 @@ label build_snowman_maddie:
             jump ending_scene
 
 label build_snowman_handsum_madong:
-    scene bg hansum madong
+    scene bg madong
     madong "Hey there, buddy."
     madong "Stay  in school."
 

@@ -17,6 +17,11 @@ label cartridge_start:
     pause 1
     you "Did I keep the save file?"
     play sound "audio/sfx_game_startup.mp3"
+
+    scene bg hansum madong
+    with fade
+
+    
     madong "People mingling, heart's a tingling, oh this warm feeling!"
     madong "Oh you're so sugoiiii, won't you be my boy!"
     you "…"
