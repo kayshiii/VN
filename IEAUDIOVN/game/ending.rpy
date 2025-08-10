@@ -12,7 +12,7 @@ define narrator = Character(None, what_color="#979797", what_italic=True)
 
 label ending_scene:
     scene bg bedroom with fade
-    play music "audio/bgm_intro_outro.mp3" fadein 1.0 volume 0.5
+    play music "audio/bgm_winter.mp3" fadein 1.0 volume 0.5
     you "I said goodbye to you again last night."
     you "Sometimes,"
     you "I try to trick my brain into thinking I'm still asleep"

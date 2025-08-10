@@ -18,10 +18,9 @@ label cartridge_start:
     you "Did I keep the save file?"
     play sound "audio/sfx_game_startup.mp3"
 
-    scene bg hansum madong
+    scene bg madong
     with fade
-
-    
+    show madong
     madong "People mingling, heart's a tingling, oh this warm feeling!"
     madong "Oh you're so sugoiiii, won't you be my boy!"
     you "…"
@@ -34,7 +33,7 @@ label cartridge_start:
     you "Haha bro how'd they ever greenlight this?"
     you "We actually played this every day for like, a full YEAR back in highschool."
     madong "Shawtycakes… you're making me blush~"
-    play sound "audio/sfx_kiss.mp3"
+    play sound "audio/sfx_kiss.wav"
     narrator "Hansum blows you a kiss"
     you "Very disturbing."
     pause 1
@@ -65,6 +64,7 @@ label cartridge_start:
     madong "I guess I could do something"
 
     # Next day prompt effect - transition to night scene
+    hide madong
     scene black with fade
     pause 0.5
     show text "{size=30}{color=#ffffff} The Next day...{/color}{/size}" at truecenter with dissolve
@@ -73,19 +73,22 @@ label cartridge_start:
     pause 0.5
 
     # Add night ambience and slow music change
-    stop music fadeout 3.0
-    play music "audio/bgm_dreamy.mp3" fadein 3.0 volume 0.2
-    play sound "audio/sfx_night_ambience.mp3" loop volume 0.15
-    
+    hide madong
+    scene bg night with dissolve
     narrator "Deep into the night, the weight of the still air in your bedroom seems to have suddenly shifted."
     narrator "The cool air brushes against your face, letting you take in each breath with ease."
     narrator "You feel at home."
-    play sound "audio/sfx_firework.mp3"
+    play sound "audio/sfx_firework.wav"
     narrator "In the distance, you hear a faint whistle ripping through the air."
     narrator "The gentle sound fades into the night, eventually dragging into a complete silence."
     narrator "Finally,"
     narrator "As if the sky couldn't hold it in any longer"
-    play sound "audio/sfx_fireworks_burst.mp3"
+    play sound "audio/sfx_firework.wav"
+    pause 0.5
+    play sound "audio/sfx_firework.wav"
+    pause 0.3
+    play sound "audio/sfx_firework.wav"
+    pause 1.0
     narrator "You hear the loud scattering sound of fireworks."
     narrator "Your eyes still closed, the sound echoes through the room as you enjoy the cold sensation of the tiled floor."
     narrator "…"
@@ -93,9 +96,7 @@ label cartridge_start:
     narrator "Weren't you on your mattress?"
     narrator "Something's off. Even from the sound of it, your room is bigger than it's supposed to be."
     narrator "You open your eyes"
-    scene bg classroom with dissolve
-    stop sound fadeout 2.0
-    play music "audio/bgm_school_festival.mp3" fadein 2.0 volume 0.4
+    scene bg festival with dissolve
     you "...what"
     narrator "You're no longer in your room, but in a classroom that looks like it was ripped straight out of an anime."
     narrator "You stand up and try to make sense of your environment."
@@ -103,8 +104,9 @@ label cartridge_start:
     narrator "And finally, outside the window, you see a crowd of students sitting on the field, watching the firework show."
     narrator "However strange, the setting is not unfamiliar to you. It's…"
     you "Oh my god I'm in P.E.E. Academy"
+    show maddie festival 
     maddie "What, did you just realize the acronym now???"
-    play sound "audio/sfx_laughter.mp3"
+    play sound "audio/sfx_laughter.wav"
     narrator "Maddie erupts in light laughter"
     pause 0.5
     narrator "That voice.. It's"
@@ -125,11 +127,13 @@ label cartridge_start:
             jump cartridge_finish
 
 label cartridge_maddie:
+    show maddie festival confused
     you "M-Maddie? Is it really you?"
     maddie "Huh? Yeah? Of course I'm.. me??? haha"
     maddie "Girl you sound weird, you okay?"
     you "..."
     pause 0.5
+    show maddie festival smiling
     you "Yeah. Yeah I'm fine haha."
     you "just… messing with you"
     narrator "Though you only see her 'player 2' icon, you know it's her. You'd recognize that voice even as a whisper in a screaming crowd."
@@ -137,6 +141,7 @@ label cartridge_maddie:
     jump cartridge_choice
 
 label cartridge_missed:
+    show maddie festival
     you "..."
     pause 0.3
     maddie "??"
@@ -146,13 +151,14 @@ label cartridge_missed:
     you "Did you still think of me?"
     you "Do you…"
     you "Do you wanna finish the game?"
+    show maddie festival smiling
     maddie "Yeahh I feel like if we don't finish it like, now, we'll keep procrastinating."
     maddie "C'mon, let's go!"
     jump cartridge_choice
 
 label cartridge_finish:
+    show maddie festival smiling
     maddie "Okay, let's go!"
-    play music "audio/bgm_happy.mp3" fadein 2.0 volume 0.5
     narrator "You spend the night joking around with Maddie, laughing like when you were just kids."
     narrator "For the first time in forever, you're finally home."
     stop music fadeout 3.0
