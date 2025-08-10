@@ -4,27 +4,30 @@
 # name of the character.
 
 define zeil = Character('Zeil', color = "#E03B8B")
-
+define mom = Character('Mom', color = "#6999ff")
 
 # The game starts here.
 
 label start:
-    "*knocking*"
-    "Nak, I left your dinner outside the door."
+    "{i}{color=#979797} knocking {/color}{/i}"
+
+    #play knocking sound fx
+
+    mom "Nak, I left your dinner outside the door."
     "..."
-    "Eat it while it’s warm."
+    mom "Eat it while it’s warm."
     "..."
     "Thanks mom"
     "Oh, it smells like pares."
     "I don’t think she’s made that since Maddie stopped coming over…"
     "Man."
-    "You look over to the box of stuff Maddie left behind. Two things catch your attention"
+    "{i}{color=#979797}You look over to the box of stuff Maddie left behind. Two things catch your attention{/color}{/i}"
 
 menu:
-    "old game cartridge":
-        jump choices1_a
-    "snowglobe made with dandruff":
-        jump choices1_b
+    "Old Game Cartridge":
+        jump snowglobe
+    "Snowglobe made with dandruff":
+        jump snowglobe
 
 label sprites:
     "Zeil"  "But wait, where are you?"
