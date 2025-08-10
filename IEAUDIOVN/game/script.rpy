@@ -20,6 +20,12 @@ label start:
     "Man."
     "You look over to the box of stuff Maddie left behind. Two things catch your attention"
 
+menu:
+    "old game cartridge":
+        jump choices1_a
+    "snowglobe made with dandruff":
+        jump choices1_b
+
 label sprites:
     "Zeil"  "But wait, where are you?"
     show zeil delighted
