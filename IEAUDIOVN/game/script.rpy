@@ -18,7 +18,9 @@ label start:
     mom "Eat it while it’s warm."
     "..."
     "Thanks mom"
+    show zeil delighted
     "Oh, it smells like pares."
+    show zeil sad
     "I don’t think she’s made that since Maddie stopped coming over…"
     "Man."
     "{i}{color=#979797}You look over to the box of stuff Maddie left behind. Two things catch your attention{/color}{/i}"
