@@ -10,14 +10,27 @@ define zeil = Character('Zeil', color = "#E03B8B")
 
 label start:
     "*knocking*"
+    show extra normal
     "Nak, I left your dinner outside the door."
+    hide extra
+
+    show zeil normal
     "..."
+    hide zeil normal
+
+    show extra normal
     "Eat it while it’s warm."
+    hide extra
+    
+    show zeil normal
     "..."
     "Thanks mom"
+    show zeil delighted
     "Oh, it smells like pares."
+    show zeil sad
     "I don’t think she’s made that since Maddie stopped coming over…"
     "Man."
+    show zeil normal
     "You look over to the box of stuff Maddie left behind. Two things catch your attention"
 
 menu:
