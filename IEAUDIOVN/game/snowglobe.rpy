@@ -16,7 +16,7 @@ default shakes = 0
 # snowglobe made with dandruff
 label snowglobe:
 
-    play music "audio/bgm_winter.mp3" fadein 1.0 volume 0.1
+    play music "audio/bgm_winter.mp3" fadein 1.0 volume 0.4
     you "This is… kinda disgusting."
 
     scene bg snowglobe
@@ -113,8 +113,9 @@ label move_forward:
     narrator "The room is pitch black. You lift your hands up to your face, but you can’t see them at all."
     you "I better just like, crawl so I don’t bump into anything."
     narrator "You go on all fours and start crawling your way forward, making your way to where you think the wall with the light switch is."
-    narrator "However, you never find the wall."
+
     play sound "audio/sfx_snowing.mp3" volume 0.2
+    narrator "However, you never find the wall."
     play sound "audio/sfx_snow_walking.mp3" volume 0.2
 
     narrator "The path below you grows colder, and colder until…"
@@ -146,6 +147,8 @@ label build_snowman:
 
 label build_snowman_dog:
     you "Aaaand there!"
+    scene bg snow2
+    show dog
     narrator "You look at your creation."
     narrator "Sure, he looks a bit silly but. That’s your dog right there."
     you "Man, I really miss you boy."
@@ -157,6 +160,8 @@ label build_snowman_dog:
             you "Good boy!"
             narrator "In a few seconds, your crusty white dog is alive again,"
             narrator "jumping up and down, and looking at you with those adorable beady eyes."
+
+            play sound "audio/sfx_bark.mp3" volume 0.7
             dog "Arf!"
             narrator "After playing with your dog for a while, you notice him start to melt."
             narrator "He’s melting very fast."
@@ -175,10 +180,13 @@ label build_another_snowman:
             jump build_snowman_maddie
         
 label build_snowman_maddie:
+    scene bg snow2
     narrator "After hesitating for a moment, you begin to build a snowman of Maddie."
     narrator "Your freezing hands gently press the cold snow into an odd shape."
     narrator "And slowly"
     narrator "The form feels more and more familiar"
+
+    show maddie normal
     narrator "before you know it– you’re holding her again."
 
     maddie "I can’t stay long"
@@ -196,6 +204,7 @@ label build_snowman_maddie:
         "I miss you Maddie":
             narrator "snowmen don't have ears"
 
+    show maddie crying
     maddie "I thought of you a lot."
     maddie "You couldn't have known, but"
     maddie "When I was sad, you’d make me giggle"
@@ -235,6 +244,7 @@ label build_snowman_maddie:
 
 label build_snowman_handsum_madong:
     scene bg madong
+    show madong
     madong "Hey there, buddy."
     madong "Stay  in school."
 
