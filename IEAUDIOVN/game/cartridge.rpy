@@ -83,7 +83,7 @@ label cartridge_start:
     hide madong
     scene black with fade
     pause 0.5
-    show text "{size=30}{color=#ffffff} The Next day...{/color}{/size}" at truecenter with dissolve
+    show text "{size=30}{color=#ffffff} The Next Day...{/color}{/size}" at truecenter with dissolve
     pause 2.0
     hide text with dissolve
     pause 0.5
@@ -123,7 +123,8 @@ label cartridge_start:
     voice "MC/line50.mp3"
     you "Oh my god I'm in P.E.E. Academy"
     show maddie festival 
-    maddie "What, did you just realize the acronym now???"
+    voice "maddie/maddie_cart1.mp3"
+    maddie "What, did you just realize that acronym now???"
     play sound "audio/sfx_laughter.wav"
     narrator "Maddie erupts in light laughter"
     pause 0.5
@@ -148,7 +149,9 @@ label cartridge_maddie:
     voice "MC/line51.mp3"
     you "M-Maddie? Is it really you?"
     show maddie festival confused
+    voice "maddie/maddie_cart2.mp3"
     maddie "Huh? Yeah? Of course I'm.. me??? haha"
+    voice "maddie/maddie_cart3.mp3"
     maddie "Girl you sound weird, you okay?"
     you "..."
     pause 0.5
@@ -158,7 +161,8 @@ label cartridge_maddie:
     voice "MC/line53.mp3"
     you "just… messing with you"
     narrator "Though you only see her 'player 2' icon, you know it's her. You'd recognize that voice even as a whisper in a screaming crowd."
-    maddie "Okay dude, no more kidding around, I wanna finish the game before sundown haha"
+    voice "maddie/maddie_cart4.mp3"
+    maddie "Okay dude, no more kidding around, I wanna finish the game before sundown"
     jump cartridge_choice
 
 label cartridge_missed:
@@ -166,6 +170,7 @@ label cartridge_missed:
     you "..."
     pause 0.3
     maddie "??"
+    voice "maddie/maddie_cart5.mp3"
     maddie "Why're you so quiet?"
     you "Do you…"
     pause 0.5
@@ -173,12 +178,15 @@ label cartridge_missed:
     you "Do you…"
     you "Do you wanna finish the game?"
     show maddie festival smiling
+    voice "maddie/maddie_cart6.mp3"
     maddie "Yeahh I feel like if we don't finish it like, now, we'll keep procrastinating."
+    voice "maddie/maddie_cart7.mp3"
     maddie "C'mon, let's go!"
     jump cartridge_choice
 
 label cartridge_finish:
     show maddie festival smiling
+    voice "maddie/maddie_cart8.mp3"
     maddie "Okay, let's go!"
     narrator "You spend the night joking around with Maddie, laughing like when you were just kids."
     narrator "For the first time in forever, you're finally home."
