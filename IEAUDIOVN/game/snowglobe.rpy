@@ -69,7 +69,7 @@ label snowglobe_broken:
 
     scene black with fade
     pause 0.5
-    show text "{size=30}{color=#ffffff} The Next day...{/color}{/size}" at truecenter with dissolve
+    show text "{size=30}{color=#ffffff} The Next Day...{/color}{/size}" at truecenter with dissolve
     pause 2.0
     hide text with dissolve
     pause 0.5
@@ -216,15 +216,20 @@ label build_snowman_maddie:
     show maddie normal
     narrator "before you know it– you’re holding her again."
 
+    play sound "maddie/maddie_snow1.mp3"
     maddie "I can’t stay long"
+    play sound "maddie/maddie_snow2.mp3"
     maddie "I just wanted to tell you that..."
+    play sound "maddie/maddie_snow3.mp3"
     maddie "I missed you."
 
     menu:
         "Tell her you missed her too":
             narrator "snowmen don't have ears"
         
+    play sound "maddie/maddie_snow4.mp3"
     maddie "I missed you, so bad."
+    play sound "maddie/maddie_snow5.mp3"
     maddie "Did you ever think of me?"
 
     menu:
@@ -232,16 +237,22 @@ label build_snowman_maddie:
             narrator "snowmen don't have ears"
 
     show maddie crying
+    play sound "maddie/maddie_snow6.mp3"
     maddie "I thought of you a lot."
+    play sound "maddie/maddie_snow7.mp3"
     maddie "You couldn't have known, but"
+    play sound "maddie/maddie_snow8.mp3"
     maddie "When I was sad, you’d make me giggle"
+    play sound "maddie/maddie_snow9.mp3"
     maddie "When I was laughing, you’d slip into my mind and my mood would dampen."
+    play sound "maddie/maddie_snow10.mp3"
     maddie "just a bit."
 
     menu:
         "I miss you":
             narrator "snowmen don't have ears"
 
+    play sound "maddie/maddie_snow11.mp3"
     maddie "Are you doing well?"
 
     menu:
@@ -250,6 +261,7 @@ label build_snowman_maddie:
         "Come back":
             narrator "snowmen don't have ears"
 
+    play sound "maddie/maddie_snow12.mp3"
     maddie "Live well, y/n"
 
     menu:
